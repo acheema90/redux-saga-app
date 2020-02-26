@@ -19,8 +19,7 @@ function* getUsersRequest() {
 function* deleteUserRequest(userId) {
 	try {
 		yield call(deleteUser, userId);
-
-		yield call(getUsers);
+		yield put(actions.getUsersRequest());
 	} catch (e) {
 		yield put(
 			actions.usersError({
@@ -43,8 +42,7 @@ function* createUserRequest({ payload }) {
 			firstName: payload.firstName,
 			lastName: payload.lastName
 		});
-
-		yield call(getUsers);
+		yield put(actions.getUsersRequest());
 	} catch (e) {
 		yield put(
 			actions.usersError({
