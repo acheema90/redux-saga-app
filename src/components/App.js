@@ -1,11 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
-import { getUsersRequest } from '../actions/users';
+import { getUsersRequest } from '../store/actions/users';
 
-const App = () => {
-	useEffect(() => {
-		getUsersRequest();
-	}, []);
+const App = ({ getUsersRequest }) => {
+	getUsersRequest();
 	return <div>test</div>;
 };
 
