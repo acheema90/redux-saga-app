@@ -27,7 +27,7 @@ const UserListItem = ({ user, onDeleteClick }) => {
 					background: stringToHslColor(user.firstName + user.lastName)
 				}}
 			>
-				{!!user && !!user.firstName && !!user.lastName
+				{user && user.firstName && user.lastName
 					? user.firstName[0].toUpperCase() + user.lastName[0].toUpperCase()
 					: ''}
 			</div>

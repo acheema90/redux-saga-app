@@ -1,7 +1,8 @@
 import { Types } from '../actions/users';
 
 const INITIAL_STATE = {
-	items: []
+	items: [],
+	error: null
 };
 
 const users = (state = INITIAL_STATE, action) => {

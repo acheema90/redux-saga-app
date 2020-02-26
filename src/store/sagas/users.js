@@ -55,7 +55,7 @@ function* createUserRequest({ payload }) {
 }
 
 function* watchCreateUserRequest() {
-	yield takeLatest(actions.Types.CREATE_USER_REQUEST, createUserRequest);
+	yield takeEvery(actions.Types.CREATE_USER_REQUEST, createUserRequest);
 }
 
 function* watchGetUsersRequest() {
